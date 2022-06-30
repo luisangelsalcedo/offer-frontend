@@ -1,0 +1,231 @@
+@import "../../app/colors.scss";
+.offerse {
+  &-empty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    height: 100vh;
+    .logo {
+      margin-bottom: 1rem;
+    }
+  }
+  &-brand {
+    display: flex;
+    align-items: center;
+    .btn {
+      margin-left: 1rem;
+    }
+    margin: 1rem 0;
+  }
+  &-header.offerse-item {
+    display: none;
+  }
+  &-item {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    padding: 2rem 1rem 1rem 1.7rem;
+    margin-top: 0.5rem;
+    border-radius: 0.5rem;
+    background: #fff;
+    & > div {
+      flex: 1;
+      flex-shrink: 0;
+      margin-top: 0.3rem;
+    }
+    & > div:nth-child(1) {
+      position: absolute;
+      left: 0.5rem;
+      top: 0.3rem;
+      font-size: 0.8rem;
+    }
+
+    .title {
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+  }
+  .logo {
+    color: #fff;
+    font-weight: bold;
+    font-size: 2.5rem;
+  }
+}
+
+.offer-modal {
+  display: none;
+  background: rgba($color: #333, $alpha: 0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  & > div {
+    position: relative;
+    z-index: 10;
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem rgba($color: #000000, $alpha: 0.4);
+    flex: 1;
+    margin: 0 1rem;
+    & + button {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      content: "" !important;
+      border: none;
+      color: transparent;
+      background: transparent;
+    }
+
+    .label {
+      text-transform: uppercase;
+      font-weight: bold;
+      color: $color-blue-primary;
+      margin-bottom: 0.5rem;
+    }
+    form {
+      input[type="text"],
+      input[type="number"],
+      textarea {
+        width: 100%;
+        box-sizing: border-box;
+        border: none;
+        outline: 0;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        margin-bottom: 0.5rem;
+        background: rgba($color: $color-blue, $alpha: 0.2);
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+        -webkit-appearance: none;
+      }
+      ::placeholder {
+        color: #bbb;
+      }
+    }
+
+    .actions {
+      display: flex;
+      justify-content: space-between;
+      button {
+        flex: 1;
+      }
+    }
+  }
+
+  &.open {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media (min-width: 280px) {
+  .offerse {
+    &-body {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    &-item {
+      margin: 0.2rem;
+    }
+  }
+}
+@media (min-width: 380px) {
+  .offer-modal {
+    & > div {
+      margin: 0 2rem;
+    }
+    .edit {
+      display: flex;
+      flex-direction: column;
+      & > div:nth-child(2) {
+        margin: 1.5rem 0;
+        display: flex;
+        & > div {
+          flex: 1;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 650px) {
+  .offerse {
+    max-width: 800px;
+    margin: auto;
+    &-header.offerse-item {
+      display: flex;
+      font-size: 0.7rem;
+      font-weight: bold;
+      background: $color-blue;
+      color: #fff;
+      & .title {
+        font-size: 0.7rem;
+      }
+    }
+    &-body {
+      flex-wrap: nowrap;
+      flex-direction: column;
+      .offerse-item:nth-of-type(2n) {
+        background: rgba($color: #fff, $alpha: 0.9);
+      }
+    }
+    &-item {
+      flex: 1;
+      flex-direction: row;
+      align-items: center;
+      padding: 0.5rem 1rem;
+      margin: 0;
+      border-radius: 0;
+      background: #fff;
+
+      & > div {
+        flex: initial;
+        flex-shrink: 0;
+        margin-top: 0;
+      }
+      & > div:nth-child(1) {
+        width: 4rem;
+        position: static;
+        font-size: 0.8rem;
+        span {
+          display: none;
+        }
+      }
+      .title {
+        flex: 1;
+        font-size: 0.9rem;
+        font-weight: bold;
+      }
+    }
+  }
+  .offer-modal {
+    & > div {
+      flex: 0;
+    }
+    .edit {
+      width: 30rem;
+    }
+  }
+}
+
+.notice {
+  position: fixed;
+  z-index: 50;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  color: $color-blue-dark;
+  padding: 0.5rem 1rem;
+}

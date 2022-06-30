@@ -1,0 +1,8 @@
+@import "./colors.scss";
+body {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  background: $color-blue;
+  color: #333;
+  font-size: 0.8rem;
+}
