@@ -1,0 +1,64 @@
+@import "../../app/colors.scss";
+
+.btn {
+  border: solid 0.1rem transparent;
+  outline: 0;
+  background: transparent;
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.3rem;
+  margin: 0.2rem;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  opacity: 1;
+  font-size: 0.8rem;
+  color: $color-blue-primary;
+
+  &:disabled {
+    opacity: 0.3;
+    &:hover {
+      opacity: 0.3;
+    }
+  }
+  i {
+    font-size: 1rem;
+    margin-right: 0.5rem;
+  }
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &[data-type="default"] {
+    background: #eee;
+  }
+
+  &[data-type="primary"] {
+    background: $color-blue-primary;
+    color: #fff;
+  }
+
+  &[data-type="secondary"] {
+    border-color: $color-blue-primary;
+    color: $color-blue-primary;
+  }
+  &[data-type="white"] {
+    background: #fff;
+    color: $color-blue-primary;
+  }
+
+  &[data-style="block"] {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  &[data-style="icon"] {
+    margin-right: 0.5rem;
+    span {
+      display: none;
+    }
+    i {
+      margin: 0;
+    }
+  }
+}
