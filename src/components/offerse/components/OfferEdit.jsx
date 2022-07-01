@@ -87,7 +87,7 @@ const OfferEdit = ({ id }) => {
 
   return (
     <>
-      <h3>Editar Oferta</h3>
+      <h3>Actualizar Oferta</h3>
       <form onSubmit={handleSubmit}>
         <div className="edit">
           {inputName}

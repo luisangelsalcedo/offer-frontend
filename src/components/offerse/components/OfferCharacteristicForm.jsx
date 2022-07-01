@@ -35,7 +35,7 @@ const OfferCharacteristicForm = ({ id }) => {
 
   return (
     <>
-      <h3>Agregar Características</h3>
+      <h3>Agregar una Característica</h3>
       <form onSubmit={handleSubmit}>
         <div>
           <input

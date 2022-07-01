@@ -43,7 +43,7 @@ const OfferPriceForm = ({ id }) => {
 
   return (
     <>
-      <h3>Agregar Precios</h3>
+      <h3>Agregar un Precio</h3>
       <form onSubmit={handleSubmit}>
         <div>
           <input
