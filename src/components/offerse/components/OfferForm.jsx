@@ -44,7 +44,7 @@ const OfferForm = () => {
             ref={btnRef}
             type="submit"
             fa={loading?.create ? `circle-o-notch fa-spin fa-fw` : ``}
-            label={loading?.create ? `Cargando...` : `Agegar`}
+            label={loading?.create ? `Cargando...` : `Agregar`}
             disabled={loading?.create}
             btn="primary"
           />

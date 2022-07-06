@@ -11,7 +11,9 @@ const ModalProvider = ({ children }) => {
   };
 
   const closeModal = (nameType) => {
-    setModals((arr) => arr.filter((m) => m.type.name !== nameType));
+    setModals((arr) =>
+      arr.filter((m) => String(m?.type?.name) !== String(nameType))
+    );
   };
 
   const memoValues = useMemo(
